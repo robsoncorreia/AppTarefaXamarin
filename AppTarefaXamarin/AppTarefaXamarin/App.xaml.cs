@@ -1,8 +1,10 @@
-﻿using System;
+﻿using AppTarefaXamarin.Paginas;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
+
 namespace AppTarefaXamarin
 {
     public partial class App : Application
@@ -11,7 +13,7 @@ namespace AppTarefaXamarin
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new InicioPage());
         }
 
         protected override void OnStart()
